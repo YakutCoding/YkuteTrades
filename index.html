@@ -1,5 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+    <script>
+    // Mengatur tombol 'Join' untuk scroll ke halaman kedua
+    document.querySelector('button:contains("Join")').addEventListener('click', function() {
+        document.getElementById('container').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    // Mengatur tombol 'Apa Benefitnya?' untuk scroll ke section yang berisi tier
+    document.querySelector('button:contains("Apa Benefitnya?")').addEventListener('click', function() {
+        document.getElementById('container').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    // Membuka link baru untuk 'Free - Utk Pak Wawan'
+    document.querySelector('button:contains("FREE - Utk Pak Wawan")').addEventListener('click', function() {
+        window.open('https://drive.google.com/your-link', '_blank');
+    });
+</script>
+
     <style>
       body {
     background: 
