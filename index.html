@@ -1,21 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <script>
-    // Mengatur tombol 'Join' untuk scroll ke halaman kedua
-    document.querySelector('button:contains("Join")').addEventListener('click', function() {
-        document.getElementById('container').scrollIntoView({ behavior: 'smooth' });
-    });
-
-    // Mengatur tombol 'Apa Benefitnya?' untuk scroll ke section yang berisi tier
-    document.querySelector('button:contains("Apa Benefitnya?")').addEventListener('click', function() {
-        document.getElementById('container').scrollIntoView({ behavior: 'smooth' });
-    });
-
-    // Membuka link baru untuk 'Free - Utk Pak Wawan'
-    document.querySelector('button:contains("FREE - Utk Pak Wawan")').addEventListener('click', function() {
-        window.open('https://drive.google.com/your-link', '_blank');
-    });
-</script>
+ 
 
     <style>
       body {
@@ -235,7 +220,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YKUTE TRADES</title>
 </head>
-
+<script> function scrollToTier() {
+        document.getElementById('tier-section').scrollIntoView({
+            behavior: 'smooth'
+        });
+    }</script>
 <body style="background-color: black; color:white">
 <center>
     <!-- Navbar -->
@@ -243,7 +232,7 @@
         &nbsp;&nbsp; &nbsp;&nbsp;
         <div style="width:40px;height:40px;border-radius:20px;background:linear-gradient(180deg, rgb(255, 0, 0) 0%, rgba(243,0,255,1) 100%);color: rgba(0, 0, 0, 0);">abc</div>
         <font style="font-family: Horizon;color:rgb(255, 255, 255)">&nbsp;YKUTE<br>&nbsp;&nbsp;TRADES </font> 
-        <button>Join</button>&nbsp;&nbsp;&nbsp;
+        <button  onclick="scrollToTier()">Join</button>&nbsp;&nbsp;&nbsp;
     </div></center>
 
     <!-- Konten utama --><br> 
@@ -257,7 +246,7 @@
             <source src="https://yakutcoding.github.io/YkuteTrades/1017(2).mp4" type="video/mp4">
             Your browser does not support HTML5 video.
         </video><br><br><br><br><br>
-        <button class="fade-in">Apa Benefitnya?</button>
+        <button class="fade-in"  onclick="scrollToTier()">Apa Benefitnya?</button>
         <br><br><br><br><br><br><br><br><br>
         <h3 style="text-align: center; color:#f0f0f0; font-family: Horizon;">THE MENTOR.</h3>
     <div  class="panel fade-in-scroll"  id="navbars" style="margin-top: 10px; width: 80%;">
@@ -286,7 +275,7 @@
                     - Dan lainnya.
                 </p>
                 <br>
-                <button style="width: 300px;">FREE - Utk Pak Wawan</button>
+                <button style="width: 300px;" onclick="window.open('https://drive.google.com/drive/u/1/folders/1Xjr4NrUvE0f8aqy3VJmkExFT0jD3kzDP?hl=id', '_blank')">FREE - Utk Pak Wawan</button>
             </div>
 
             <!-- Panel Tier Elite -->
@@ -304,7 +293,7 @@ background: linear-gradient(360deg, rgba(198,162,70,1) 23%, rgba(220,255,0,1) 10
             </div>
         </div>
     </div>
-    <div class="next-page"style=" background: 
+    <div id="tier-section" class="next-page"style=" background: 
         linear-gradient(0deg, transparent 24%, rgba(144, 144, 144, 0.3) 25%, rgba(114, 114, 114, 0.3) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.3) 75%, rgba(114, 114, 114, 0.3) 76%, transparent 77%, transparent),
         linear-gradient(90deg, transparent 24%, rgba(147, 147, 147, 0.3) 25%, rgba(114, 114, 114, 0.3) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.3) 75%, rgba(114, 114, 114, 0.3) 76%, transparent 77%, transparent),
         linear-gradient(360deg, rgb(0, 0, 0) 23%, rgba(79,0,10,1) 83%, rgba(126,0,0,1) 100%);
